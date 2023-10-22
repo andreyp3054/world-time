@@ -11,24 +11,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
   int counter = 0;
 
   @override
-  void getData() async {
-    // simulate network request for a username
-    String username = await Future.delayed(const Duration(seconds: 3), () {
-      return "Mark";
-    });
-    // simulate network request for bio
-    String bio = await Future.delayed(const Duration(seconds: 0), () {
-      return "chef, gamer";
-    });
-
-    print("$username - $bio");
-  }
-    @override
-  void initState() {
-      super.initState();
-        getData();
-    }
-
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
