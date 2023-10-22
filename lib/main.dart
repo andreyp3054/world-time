@@ -5,7 +5,7 @@ import 'package:world_time/pages/loading.dart';
 
 void main() => runApp(
       MaterialApp(
-        initialRoute: "/",    // overrides the base route
+        initialRoute: "/loading",    // overrides the base route
         routes: {
           "/": (context) => const Loading(),
           // "/" is the base/default route, these routes takes a function argument "context" item
