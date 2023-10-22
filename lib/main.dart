@@ -7,7 +7,7 @@ void main() => runApp(
       MaterialApp(
         initialRoute: "/loading",    // overrides the base route
         routes: {
-          "/": (context) => const Loading(),
+          "/loading": (context) => const Loading(),
           // "/" is the base/default route, these routes takes a function argument "context" item
           // that takes us to where in the widget tree it is
           "/home": (context) => const Home(),
