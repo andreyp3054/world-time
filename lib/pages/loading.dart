@@ -17,7 +17,8 @@ class _LoadingState extends State<Loading> {
     Navigator.pushReplacementNamed(context, "/home", arguments: {
       "location": instance.location,
       "flag": instance.flag,
-      "time": instance.time
+      "time": instance.time,
+      "isDaytime": instance.isDaytime,
     }); // use pushReplacementNamed instead of pushNamed to KEEP the HOME at the bottom of the stack)
   }
 
@@ -29,12 +30,12 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.purple[600],
       body: const Center(
-          child: SpinKitDancingSquare(
-        color: Colors.white,
-        size: 120.0,
+        child: SpinKitDancingSquare(
+          color: Colors.white,
+          size: 120.0,
         ),
       ),
     );

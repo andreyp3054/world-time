@@ -22,14 +22,15 @@ class WorldTime {
       String dateTime = data['datetime'];
       String offset = data['utc_offset'].substring(1, 3); //01 instead of +01:00
 
-      DateTime now = DateTime.parse(dateTime); // create a new object of datetime
+      DateTime now =
+          DateTime.parse(dateTime); // create a new object of datetime
       now = now.add(Duration(hours: int.parse(offset)));
 
       //set the time property
-      isDaytime = (now.hour > 6 && now.hour < 20) ? true: false;
+      isDaytime = (now.hour > 6 && now.hour < 20) ? true : false;
       time = DateFormat.jm().format(now);
+      print(isDaytime.toString());
       print(time);
-
     } catch (e) {
       print("caught error: $e");
       time = "could not get time data";
