@@ -25,6 +25,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
         flag: 'philippines.png'),
   ];
 
+
   void updateTime(index) async {
     WorldTime instance = locations[index];
     await instance.getTime();
